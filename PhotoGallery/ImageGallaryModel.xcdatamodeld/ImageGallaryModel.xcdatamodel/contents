@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14A389" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Image" representedClassName="Image" syncable="YES">
+        <attribute name="imageName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="imageType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ImageType" inverseName="image" inverseEntity="ImageType" syncable="YES"/>
+    </entity>
+    <entity name="ImageType" representedClassName="ImageType" syncable="YES">
+        <attribute name="imageType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageTypeId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="image" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Image" inverseName="imageType" inverseEntity="Image" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Image" positionX="-315" positionY="-18" width="128" height="88"/>
+        <element name="ImageType" positionX="-54" positionY="9" width="128" height="88"/>
+    </elements>
+</model>

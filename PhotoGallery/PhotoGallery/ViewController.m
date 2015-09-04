@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
+#import "WebServiceManager.h"
+#import "DataManger.h"
+#import "AppDelegate.h"
+@interface ViewController ()<ImageDataProtocol>
 
 @end
 
@@ -16,12 +18,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [WebServiceManager sharedInstance].delegate = self;
+    [[WebServiceManager sharedInstance] getImagesFromServer];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark - ImageDataProtocol delegate Method
 
+-(void)finishImageDataDownloading:(NSDictionary *)imageDataDict {
+    // save Image data into database
+    
+    for (NSString *key in imageDataDict) {
+        [[DataManger sharedInstance] saveImageType:key];
+        NSArray * imagesArray = [imageDataDict valueForKey:key];
+        for (NSDictionary * imageDict in imagesArray) {
+            NSString * imageName = [imageDict valueForKey:@"name"];
+            NSString * imageUrl = [imageDict valueForKey:@"imgURL"];
+            [[DataManger sharedInstance] saveImage:imageName :imageUrl];
+        }
+        
+    }
+  
+}
 @end
