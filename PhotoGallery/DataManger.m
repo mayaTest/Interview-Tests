@@ -29,6 +29,10 @@
                                                         inManagedObjectContext:context];
  
     imageTypeObj.imageType = imageType;
+    NSError * error;
+    if ([context save:&error]) {
+        
+    }
 }
 - (void)saveImage:(NSString *)imageName :(NSString *)imageUrl {
     NSManagedObjectContext * context = [(AppDelegate *)[UIApplication sharedApplication].delegate managedObjectContext];
@@ -38,6 +42,10 @@
     
     imageObj.imageName = imageName;
     imageObj.imageUrl = imageUrl;
-    
+    NSError * error;
+
+    if ([context save:&error]) {
+        
+    }
 }
 @end

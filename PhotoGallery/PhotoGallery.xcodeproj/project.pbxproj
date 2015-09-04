@@ -43,6 +43,7 @@
 		EBF79E2F1B99697700241D2B /* ImageType.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF79E2C1B99697700241D2B /* ImageType.m */; };
 		EBF79E301B99697700241D2B /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF79E2E1B99697700241D2B /* Image.m */; };
 		EBF79E341B996BFA00241D2B /* DataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF79E331B996BFA00241D2B /* DataManger.m */; };
+		EBF79E371B99712E00241D2B /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF79E361B99712E00241D2B /* ImageCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,8 @@
 		EBF79E2E1B99697700241D2B /* Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Image.m; path = PhotoGallery/Model/Image.m; sourceTree = "<group>"; };
 		EBF79E321B996BFA00241D2B /* DataManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManger.h; sourceTree = "<group>"; };
 		EBF79E331B996BFA00241D2B /* DataManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManger.m; sourceTree = "<group>"; };
+		EBF79E351B99712E00241D2B /* ImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCollectionViewCell.h; sourceTree = "<group>"; };
+		EBF79E361B99712E00241D2B /* ImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +184,8 @@
 				C002B6B61B8B0FF50062B550 /* ViewController.h */,
 				C002B6B71B8B0FF50062B550 /* ViewController.m */,
 				C002B6B91B8B0FF50062B550 /* Main.storyboard */,
+				EBF79E351B99712E00241D2B /* ImageCollectionViewCell.h */,
+				EBF79E361B99712E00241D2B /* ImageCollectionViewCell.m */,
 				C002B6BC1B8B0FF50062B550 /* Images.xcassets */,
 				C002B6BE1B8B0FF50062B550 /* LaunchScreen.xib */,
 				C002B6AF1B8B0FF50062B550 /* Supporting Files */,
@@ -453,6 +458,7 @@
 				C002B71D1B8B11700062B550 /* UIWebView+AFNetworking.m in Sources */,
 				C002B6B21B8B0FF50062B550 /* main.m in Sources */,
 				C002B7151B8B11700062B550 /* SBJsonWriter.m in Sources */,
+				EBF79E371B99712E00241D2B /* ImageCollectionViewCell.m in Sources */,
 				EBF79E341B996BFA00241D2B /* DataManger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
